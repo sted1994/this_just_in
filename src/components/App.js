@@ -1,10 +1,11 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
+import { StoriesContainer } from "./StoriesContainer"
 import { Route, Routes, Link, NavLink } from 'react-router-dom';
 import '../style/App.css';
 import {apiCalls} from "../scripts/apiCalls"
 
-function App() {
+export const App = () => {
 
   const [topStories, setTopStories] = useState([])
 
@@ -18,9 +19,9 @@ function App() {
 
   return (
     <div className="App">
-     {getStories()}
+      <h1>This Just In!</h1>
+      <StoriesContainer getStories={getStories} topStories={topStories}/>
     </div>
   );
 }
 
-export default App;
