@@ -1,5 +1,6 @@
 import React from 'react';
 import { Story } from "./Story"
+import "../style/storyContainer.css"
 
 export const StoriesContainer = ({getStories, topStories}) => {
     {getStories()}
@@ -7,8 +8,11 @@ export const StoriesContainer = ({getStories, topStories}) => {
         const stories = topStories.map(story => <Story story={story}/>)
         return (
             <>
-                {stories}
-            </>
+                <h2>Top Stories</h2>
+                <div className="storyContainer">
+                    {stories}
+                </div>
+            </>  
            ) 
     }
 }

@@ -1,0 +1,10 @@
+.story-card{
+    background-color: rgb(172, 181, 181);
+    border-radius: 8px;
+    height: 400px;
+    margin: 8px;
+    width: 500px;
+}
+.story_img{
+    height:40%;
+}
