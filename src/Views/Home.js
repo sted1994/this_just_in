@@ -6,11 +6,11 @@ import { Route, Routes, Link, NavLink } from 'react-router-dom';
 import '../style/homeView.css';
 import {apiCalls} from "../scripts/apiCalls"
 
-export const HomeView = ({getStories, topStories, setChosen}) =>{
+export const HomeView = ({ getStories, topStories, setChosen, setFilterSelection , sectionsSummary}) =>{
     return (
         <div className="App">
             <h1>This Just In!</h1>
-            <FilterDropdown/>
+            <FilterDropdown sectionsSummary={sectionsSummary} setChosen={setChosen} setFilterSelection={setFilterSelection} topStories={topStories}/>
             <StoriesContainer setChosen={setChosen} getStories={getStories} topStories={topStories}/>
         </div>
     )
