@@ -38,7 +38,7 @@ export const App = () => {
 
   return (
     <Routes>
-      <Route exact path="/" element={<HomeView sectionsSummary={sectionsSummary} setFilterSelection={setFilterSelection} setChosen={setChosenArticle} getStories={getStories} topStories={topStories}/>}/>
+      <Route exact path="/" element={<HomeView filterSelection={filterSelection} sectionsSummary={sectionsSummary} setFilterSelection={setFilterSelection} setChosen={setChosenArticle} getStories={getStories} topStories={topStories}/>}/>
       <Route path="/:id" element={<StoryDetails story={chosenAtricle} topStories={topStories}/>}/>
     </Routes>
   );
